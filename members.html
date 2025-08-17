@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Only - Deb's Flavor Junction</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="members.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="dfj logo2.jpg">
+
+
+</head>
+<body class="members-page">
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html" class="logo-link">
+                        <img src="dfj logo2.jpg" alt="Deb's Flavor Junction" class="logo-img">
+                        <span class="logo-text"><span class="logo-orange">Deb's Flavor</span> <span class="logo-green">Junction</span></span>
+                    </a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="members.html">Members Only</a></li>
+                    <li><a href="index.html#videos">Videos</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-controls">
+                    <div class="social-links">
+                        <a href="https://youtube.com/@debsflavorjunction?si=5f8spOsoht48cDJE" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61565698615807&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/debsflavor?igsh=eXBIbF0Ym1tbThk" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+
+                    <div class="theme-toggle">
+                        <button id="themeToggle" class="theme-btn">
+                            <i class="fas fa-palette"></i>
+                        </button>
+                    </div>
+
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Premium Hero Section -->
+    <section class="premium-hero">
+        <div class="container">
+            <div class="premium-content">
+                <div class="crown-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <h1>🌟 Welcome to the <span class="logo-orange">Exclusive</span> <span class="logo-green">Members Zone</span></h1>
+                <p class="premium-subtitle">Unlock the secrets of authentic Bengali cuisine with our premium membership benefits</p>
+                
+                <div class="membership-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-video premium-icon"></i>
+                        <h3>Exclusive Recipe Videos</h3>
+                        <p>Access to members-only cooking tutorials with detailed techniques</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-star premium-icon"></i>
+                        <h3>Early Access Content</h3>
+                        <p>Be the first to try new recipes before they go public</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-book-open premium-icon"></i>
+                        <h3>Premium Recipe Collection</h3>
+                        <p>Downloadable PDFs with secret family recipes and tips</p>
+                    </div>
+                </div>
+                
+                <div class="membership-cta">
+                    <a href="https://youtube.com/@debsflavorjunction?si=5f8spOsoht48cDJE" target="_blank" class="btn btn-premium hover-effect">
+                        <i class="fas fa-crown"></i> Become a Member Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Member Authentication -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-card">
+                <h2>Member Access Required</h2>
+                <p>Please enter your registered email to access exclusive content</p>
+                <div class="auth-form">
+                    <input type="email" id="memberEmail" placeholder="Enter your email address">
+                    <button id="verifyMember" class="btn btn-verify hover-effect">Verify Membership</button>
+                </div>
+                <div id="authMessage" class="auth-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exclusive Recipes Section -->
+    <section class="exclusive-recipes" id="exclusiveContent" style="display: none;">
+        <div class="container">
+            <h2 class="section-title premium-title">🔒 Exclusive Members-Only Recipes</h2>
+            <div class="recipes-grid">
+                <!-- Recipe cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Members Videos -->
+    <section class="special-videos" id="specialVideosContent" style="display: none;">
+        <div class="container">
+            <h2 class="section-title premium-title">🎥 Special Members Videos</h2>
+            <div class="recipes-grid" id="specialVideosGrid">
+                <!-- Special videos will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Early Access Videos -->
+    <section class="early-access" id="earlyAccessContent" style="display: none;">
+        <div class="container">
+            <h2 class="section-title premium-title">⚡ Early Access Videos</h2>
+            <div class="recipes-grid" id="earlyAccessGrid">
+                <!-- Early access videos will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Live Sessions (Gold Only) -->
+    <section class="live-sessions" id="liveSessionsContent" style="display: none;">
+        <div class="container">
+            <h2 class="section-title premium-title">🔴 Live Cooking Sessions</h2>
+            <div class="live-session-card">
+                <div class="live-indicator">
+                    <span class="live-dot"></span>
+                    <span>LIVE</span>
+                </div>
+                <h3>Weekly Live Cooking with Chef Debdas</h3>
+                <p>Join our exclusive live cooking sessions every Sunday at 7 PM IST</p>
+                <a href="https://youtube.com/@debsflavorjunction?si=5f8spOsoht48cDJE" target="_blank" class="btn btn-live hover-effect">
+                    <i class="fas fa-video"></i> Join Live Session
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="dfj logo2.jpg" alt="Deb's Flavor Junction" class="footer-logo-img">
+                    <h3><span class="logo-orange">Deb's Flavor</span> <span class="logo-green">Junction</span></h3>
+                    <p>Bringing authentic Bengali flavors to your kitchen with love and tradition.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="recipes.html"><i class="fas fa-utensils"></i> Recipes</a></li>
+                        <li><a href="members.html"><i class="fas fa-crown"></i> Members Only</a></li>
+                        <li><a href="index.html#videos"><i class="fas fa-video"></i> Videos</a></li>
+                        <li><a href="index.html#about"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4><i class="fas fa-share-alt"></i> Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://youtube.com/@debsflavorjunction?si=5f8spOsoht48cDJE" target="_blank" class="social-youtube"><i class="fab fa-youtube"></i> YouTube</a>
+                        <a href="https://www.facebook.com/profile.php?id=61565698615807&mibextid=ZbWKwL" target="_blank" class="social-facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="https://www.instagram.com/debsflavor?igsh=eXBIbF0Ym1tbThk" target="_blank" class="social-instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4><i class="fas fa-bell"></i> Stay Updated</h4>
+                    <p>Subscribe for new recipes and cooking tips!</p>
+                    <div class="footer-newsletter-form">
+                        <input type="email" placeholder="Your email" />
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Deb's Flavor Junction. All rights reserved. Made with ❤️ for food lovers worldwide.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: #888;">Website developed by Mr.X</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="members.js"></script>
+</body>
+</html>

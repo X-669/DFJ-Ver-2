@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Recipes - Deb's Flavour Junction</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="recipes.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="dfj logo2.jpg">
+
+</head>
+<body class="recipes-page">
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html" class="logo-link">
+                        <img src="dfj logo2.jpg" alt="Deb's Flavor Junction" class="logo-img">
+                        <span class="logo-text"><span class="logo-orange">Deb's Flavor</span> <span class="logo-green">Junction</span></span>
+                    </a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="members.html">Members Only</a></li>
+                    <li><a href="index.html#videos">Videos</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-controls">
+                    <div class="social-links">
+                        <a href="https://youtube.com/@debsflavorjunction?si=5f8spOsoht48cDJE" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61565698615807&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/debsflavor?igsh=eXBIbF0Ym1tbThk" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+
+                    <div class="theme-toggle">
+                        <button id="themeToggle" class="theme-btn">
+                            <i class="fas fa-palette"></i>
+                        </button>
+                    </div>
+
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <h1>সব রেসিপি | All Recipes</h1>
+            <div class="search-container">
+                <input type="text" id="recipeSearch" placeholder="Search recipes... | রেসিপি খুঁজুন...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-category="all">All | সব</button>
+                <button class="filter-btn" data-category="sweets">Sweets | মিষ্টি</button>
+                <button class="filter-btn" data-category="fish">Fish | মাছ</button>
+                <button class="filter-btn" data-category="chicken">Non-Veg | মাংস</button>
+                <button class="filter-btn" data-category="vegetarian">Veg | নিরামিষ</button>
+                <button class="filter-btn" data-category="rice">Rice | ভাত</button>
+                <button class="filter-btn" data-category="bread">Bread | রুটি</button>
+                <button class="filter-btn" data-category="south-indian">South Indian | দক্ষিণ ভারতীয়</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipes Grid -->
+    <section class="recipes-grid-section">
+        <div class="container">
+            <div class="recipes-scroll-container">
+                <div class="recipes-grid" id="recipesGrid">
+                
+                <div class="recipe-item" data-category="sweets">
+                    <div class="recipe-card-full">
+                        <img src="Vapa pithe.jpg" alt="Steamed Rice Flour Cake">
+                        <div class="recipe-content">
+                            <h3>চালের গুড়োর ভাপা পিঠে | Steamed Rice Flour Cake</h3>
+                            <p class="recipe-desc">Traditional Bengali steamed rice cake</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 30 mins</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-signal"></i> Easy</span>
+                            </div>
+                            <div class="recipe-details">
+                                <h4>Ingredients:</h4>
+                                <ul>
+                                    <li>2 cups rice flour</li>
+                                    <li>1 cup jaggery</li>
+                                    <li>1 cup coconut (grated)</li>
+                                    <li>1/2 cup water</li>
+                                    <li>Salt to taste</li>
+                                    <li>Banana leaves for steaming</li>
+                                </ul>
+                                <h4>Instructions:</h4>
+                                <ol>
+                                    <li>Mix rice flour with water and salt to make dough</li>
+                                    <li>Prepare filling with jaggery and coconut</li>
+                                    <li>Make small balls and stuff with filling</li>
+                                    <li>Wrap in banana leaves</li>
+                                    <li>Steam for 15-20 minutes</li>
+                                    <li>Serve hot</li>
+                                </ol>
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/XtuVnbs8Jdw?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="sweets">
+                    <div class="recipe-card-full">
+                        <img src="Patisapta pithe.jpg" alt="Rolled Flat Pitha">
+                        <div class="recipe-content">
+                            <h3>পাটি সাপটা পিঠে | Rolled Flat Pitha</h3>
+                            <p class="recipe-desc">Traditional Bengali rolled flat cake</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 25 mins</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-signal"></i> Medium</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/E353Goj-gZI?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="rice">
+                    <div class="recipe-card-full">
+                        <img src="Basanti Pulao.jpg" alt="Basanti Pulao">
+                        <div class="recipe-content">
+                            <h3>বাসন্তী পোলাও | Basanti Pulao</h3>
+                            <p class="recipe-desc">Aromatic saffron rice with nuts and raisins</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 45 mins</span>
+                                <span><i class="fas fa-users"></i> 6 servings</span>
+                                <span><i class="fas fa-signal"></i> Medium</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/itH2pykkHeQ?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="chicken">
+                    <div class="recipe-card-full">
+                        <img src="90's Chicken Recipie.jpg" alt="Chicken Curry">
+                        <div class="recipe-content">
+                            <h3>মুরগির মাংস | Chicken Curry Recipe</h3>
+                            <p class="recipe-desc">Traditional Bengali chicken curry</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 50 mins</span>
+                                <span><i class="fas fa-users"></i> 5 servings</span>
+                                <span><i class="fas fa-signal"></i> Medium</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/pI35Hibi5wU?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="vegetarian">
+                    <div class="recipe-card-full">
+                        <img src="Matar paneer recipe.jpg" alt="Matar Paneer">
+                        <div class="recipe-content">
+                            <h3>মটর পনির | Matar Paneer Recipe</h3>
+                            <p class="recipe-desc">Green peas and cottage cheese curry</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 30 mins</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-signal"></i> Medium</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/rTFhmPeDlX0?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="chicken">
+                    <div class="recipe-card-full">
+                        <img src="Kadhai Chicken Recipe.jpg" alt="Kadhai Chicken">
+                        <div class="recipe-content">
+                            <h3>কড়াই চিকেন | Kadhai Chicken Recipe</h3>
+                            <p class="recipe-desc">Spicy chicken cooked in kadhai style</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 45 mins</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-signal"></i> Medium</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/MiN2GqZAnag?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="sweets">
+                    <div class="recipe-card-full">
+                        <img src="Kalo jamuner recipe.jpg" alt="Kalojam">
+                        <div class="recipe-content">
+                            <h3>কালোজাম | Kala Jamun</h3>
+                            <p class="recipe-desc">Traditional Bengali black sweet dessert</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 60 mins</span>
+                                <span><i class="fas fa-users"></i> 6 servings</span>
+                                <span><i class="fas fa-signal"></i> Hard</span>
+                            </div>
+                            <div class="recipe-details">
+                                <h4>Ingredients:</h4>
+                                <ul>
+                                    <li>1 cup milk powder</li>
+                                    <li>1/4 cup all-purpose flour</li>
+                                    <li>2 tbsp ghee</li>
+                                    <li>1/4 cup milk</li>
+                                    <li>1 cup sugar</li>
+                                    <li>2 cups water</li>
+                                    <li>1/4 tsp cardamom powder</li>
+                                    <li>Oil for deep frying</li>
+                                </ul>
+                                <h4>Instructions:</h4>
+                                <ol>
+                                    <li>Mix milk powder, flour, and ghee</li>
+                                    <li>Add milk gradually to make soft dough</li>
+                                    <li>Make small balls and deep fry until dark brown</li>
+                                    <li>Prepare sugar syrup with water and cardamom</li>
+                                    <li>Soak fried balls in hot syrup for 2 hours</li>
+                                    <li>Serve warm or at room temperature</li>
+                                </ol>
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/iXCrlawDcpY?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="chicken">
+                    <div class="recipe-card-full">
+                        <img src="Egg Tadka Recipe.jpg" alt="Egg Tadka">
+                        <div class="recipe-content">
+                            <h3>ডিম তড়কা | Egg Tadka Recipe</h3>
+                            <p class="recipe-desc">Spicy egg tadka with aromatic spices</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 15 mins</span>
+                                <span><i class="fas fa-users"></i> 3 servings</span>
+                                <span><i class="fas fa-signal"></i> Easy</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/jXLn-HY4f6c?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="vegetarian">
+                    <div class="recipe-card-full">
+                        <img src="Niramis paneerer recipe.jpg" alt="Vegetarian Paneer">
+                        <div class="recipe-content">
+                            <h3>নিরামিষ পনিরের রেসিপি | Vegetarian Paneer Recipe</h3>
+                            <p class="recipe-desc">Delicious vegetarian paneer curry</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 35 mins</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-signal"></i> Medium</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/BbdFrkT92CI?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="vegetarian">
+                    <div class="recipe-card-full">
+                        <img src="Maan kochu bata.jpg" alt="Mashed Malanga">
+                        <div class="recipe-content">
+                            <h3>মান কচু বাটা | Mashed Malanga Arum</h3>
+                            <p class="recipe-desc">Traditional mashed elephant foot yam paste</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 20 mins</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-signal"></i> Easy</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/TyAyfgIqf8o?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="vegetarian">
+                    <div class="recipe-card-full">
+                        <img src="Kumro patar bharta.jpg" alt="Pumpkin Leaves">
+                        <div class="recipe-content">
+                            <h3>কুমড়ো পাতার ভর্তা | Mashed Pumpkin Leaves</h3>
+                            <p class="recipe-desc">Traditional Bengali mashed pumpkin leaves</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 15 mins</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-signal"></i> Easy</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/eVlBtZ7pLEw?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="vegetarian">
+                    <div class="recipe-card-full">
+                        <img src="Mayapur Skoner Niramish Recipe.jpg" alt="ISKCON Recipe">
+                        <div class="recipe-content">
+                            <h3>মায়াপুরের ইস্কনের নিরামিষ | ISKCON Vegetarian Recipe</h3>
+                            <p class="recipe-desc">Mayapur ISKCON's special vegetarian dish</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 40 mins</span>
+                                <span><i class="fas fa-users"></i> 6 servings</span>
+                                <span><i class="fas fa-signal"></i> Medium</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/0Ywe567-IiE?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="chicken">
+                    <div class="recipe-card-full">
+                        <img src="Dimer Kosa.jpg" alt="Egg Curry">
+                        <div class="recipe-content">
+                            <h3>ডিমের কষা | Spicy Egg Curry</h3>
+                            <p class="recipe-desc">Bengali-style spicy egg curry</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 25 mins</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-signal"></i> Easy</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/QBpb9DrpTk8?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="south-indian">
+                    <div class="recipe-card-full">
+                        <img src="Dhosar Chatni recipe.jpg" alt="Dosa Chutney">
+                        <div class="recipe-content">
+                            <h3>ধোসার চাটনি | Dosa Chutney Recipe</h3>
+                            <p class="recipe-desc">Traditional South Indian chutney for dosa</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 15 mins</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-signal"></i> Easy</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/-IS7PxPFQws?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="rice">
+                    <div class="recipe-card-full">
+                        <img src="Niramish Fried Rice.jpg" alt="Vegetarian Fried Rice">
+                        <div class="recipe-content">
+                            <h3>নিরামিষ ফ্রাইড রাইস | Veg Fried Rice</h3>
+                            <p class="recipe-desc">Delicious veg fried rice with vegetables</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 20 mins</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-signal"></i> Easy</span>
+                            </div>
+                            <div class="recipe-details">
+                                <h4>Ingredients:</h4>
+                                <ul>
+                                    <li>2 cups cooked basmati rice</li>
+                                    <li>1 cup mixed vegetables (carrots, beans, peas)</li>
+                                    <li>1 large onion, sliced</li>
+                                    <li>2 cloves garlic, minced</li>
+                                    <li>1 inch ginger, minced</li>
+                                    <li>2 tbsp soy sauce</li>
+                                    <li>1 tbsp vegetable oil</li>
+                                    <li>Salt and pepper to taste</li>
+                                </ul>
+                                <h4>Instructions:</h4>
+                                <ol>
+                                    <li>Heat oil in large wok or pan</li>
+                                    <li>Add garlic and ginger, stir-fry for 30 seconds</li>
+                                    <li>Add onions and vegetables, cook for 3-4 minutes</li>
+                                    <li>Add cooked rice and mix well</li>
+                                    <li>Add soy sauce, salt, and pepper</li>
+                                    <li>Stir-fry for 2-3 minutes until heated through</li>
+                                </ol>
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/z_1VFF632oE?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="bread">
+                    <div class="recipe-card-full">
+                        <img src="moglai paratha recipe.jpg" alt="Mughlai Paratha">
+                        <div class="recipe-content">
+                            <h3>মোগলাই পরোটা | Mughlai Paratha Recipe</h3>
+                            <p class="recipe-desc">Rich stuffed paratha with egg and meat</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 45 mins</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-signal"></i> Hard</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/x9nlhXYU5io?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="sweets">
+                    <div class="recipe-card-full">
+                        <img src="Carrot Kheer.jpg" alt="Carrot Kheer">
+                        <div class="recipe-content">
+                            <h3>গাজরের ক্ষীর | Carrot Pudding Recipe</h3>
+                            <p class="recipe-desc">Sweet carrot pudding with milk and nuts</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 40 mins</span>
+                                <span><i class="fas fa-users"></i> 6 servings</span>
+                                <span><i class="fas fa-signal"></i> Medium</span>
+                            </div>
+                            <div class="recipe-details">
+                                <h4>Ingredients:</h4>
+                                <ul>
+                                    <li>2 cups grated carrots</li>
+                                    <li>1 liter full-fat milk</li>
+                                    <li>1/2 cup sugar</li>
+                                    <li>2 tbsp ghee</li>
+                                    <li>1/4 cup chopped almonds</li>
+                                    <li>1/4 cup raisins</li>
+                                    <li>1/2 tsp cardamom powder</li>
+                                    <li>Pinch of saffron</li>
+                                </ul>
+                                <h4>Instructions:</h4>
+                                <ol>
+                                    <li>Heat ghee in heavy-bottomed pan</li>
+                                    <li>Add grated carrots and sauté for 5 minutes</li>
+                                    <li>Pour milk and bring to boil</li>
+                                    <li>Simmer on low heat until milk reduces by half</li>
+                                    <li>Add sugar, cardamom, and saffron</li>
+                                    <li>Cook until thick consistency, garnish with nuts</li>
+                                </ol>
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/NkA54KkS_vg?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="south-indian">
+                    <div class="recipe-card-full">
+                        <img src="Dosa Batter.jpg" alt="Dosa Batter">
+                        <div class="recipe-content">
+                            <h3>ধোসার ব্যাটার | Dosa Batter Recipe</h3>
+                            <p class="recipe-desc">Perfect fermented batter for crispy dosas</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 8 hours</span>
+                                <span><i class="fas fa-users"></i> 8 servings</span>
+                                <span><i class="fas fa-signal"></i> Medium</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/9ECsVQXMlj4?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="sweets">
+                    <div class="recipe-card-full">
+                        <img src="Tel or Chandosa Pithe.jpg" alt="Oil Pitha">
+                        <div class="recipe-content">
+                            <h3>তেল পিঠে | Oil-Fried Pitha</h3>
+                            <p class="recipe-desc">Traditional Bengali oil-fried sweet cake</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 30 mins</span>
+                                <span><i class="fas fa-users"></i> 6 servings</span>
+                                <span><i class="fas fa-signal"></i> Medium</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/2H8H0Tm7aZ4?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="vegetarian">
+                    <div class="recipe-card-full">
+                        <img src="Non veg doi patal.jpg" alt="Doi Potol">
+                        <div class="recipe-content">
+                            <h3>নিরামিষ দই পটল | Vegetarian Doi Potol</h3>
+                            <p class="recipe-desc">Pointed gourd in yogurt curry</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 35 mins</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-signal"></i> Medium</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/VmcFTDfLH5A?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="fish">
+                    <div class="recipe-card-full">
+                        <img src="Chingrir Bharta .jpg" alt="Prawn Bharta">
+                        <div class="recipe-content">
+                            <h3>চিংড়ির ভর্তা | Mashed Prawn Dish</h3>
+                            <p class="recipe-desc">Traditional Bengali mashed prawn curry</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 30 mins</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-signal"></i> Medium</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/Qj_7cGoHUSw?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="vegetarian">
+                    <div class="recipe-card-full">
+                        <img src="Shimer Pokoda recipe.jpg" alt="Bean Fritters">
+                        <div class="recipe-content">
+                            <h3>সিমের পকোড়া | Flat Bean Fritters</h3>
+                            <p class="recipe-desc">Crispy flat bean fritters</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 20 mins</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-signal"></i> Easy</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/pixtHrnDL-c?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="vegetarian">
+                    <div class="recipe-card-full">
+                        <img src="Non Veg Chili Soyabean Recipe.jpg" alt="Soya Chilli">
+                        <div class="recipe-content">
+                            <h3>নিরামিষ সোয়া চিল্লি | Vegetarian Soya Chilli</h3>
+                            <p class="recipe-desc">Spicy soya chunks in chilli sauce</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 25 mins</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-signal"></i> Easy</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/NziA69ooBX4?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-item" data-category="sweets">
+                    <div class="recipe-card-full">
+                        <img src="Christmas Cake.jpg" alt="Christmas Cake">
+                        <div class="recipe-content">
+                            <h3>ক্রিসমাস কেক | Christmas Cake</h3>
+                            <p class="recipe-desc">Festive Christmas cake with fruits and nuts</p>
+                            <div class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 2 hours</span>
+                                <span><i class="fas fa-users"></i> 8 servings</span>
+                                <span><i class="fas fa-signal"></i> Hard</span>
+                            </div>
+                            <div class="recipe-details">
+                                <div class="video-link">
+                                    <a href="https://youtube.com/shorts/DkywHggzNqY?feature=share" target="_blank">
+                                        <i class="fab fa-youtube"></i> Watch Recipe Video
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="dfj logo2.jpg" alt="Deb's Flavor Junction" class="footer-logo-img">
+                    <h3><span class="logo-orange">Deb's Flavor</span> <span class="logo-green">Junction</span></h3>
+                    <p>Bringing authentic Bengali flavors to your kitchen with love and tradition.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="recipes.html"><i class="fas fa-utensils"></i> Recipes</a></li>
+                        <li><a href="members.html"><i class="fas fa-crown"></i> Members Only</a></li>
+                        <li><a href="index.html#videos"><i class="fas fa-video"></i> Videos</a></li>
+                        <li><a href="index.html#about"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4><i class="fas fa-share-alt"></i> Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://youtube.com/@debsflavorjunction?si=5f8spOsoht48cDJE" target="_blank" class="social-youtube"><i class="fab fa-youtube"></i> YouTube</a>
+                        <a href="https://www.facebook.com/profile.php?id=61565698615807&mibextid=ZbWKwL" target="_blank" class="social-facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="https://www.instagram.com/debsflavor?igsh=eXBIbF0Ym1tbThk" target="_blank" class="social-instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4><i class="fas fa-bell"></i> Stay Updated</h4>
+                    <p>Subscribe for new recipes and cooking tips!</p>
+                    <div class="footer-newsletter-form">
+                        <input type="email" placeholder="Your email" />
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Deb's Flavor Junction. All rights reserved. Made with ❤️ for food lovers worldwide.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: #888;">Website developed by Mr.X</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="recipes.js"></script>
+</body>
+</html>
